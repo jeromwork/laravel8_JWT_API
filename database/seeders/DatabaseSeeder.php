@@ -13,9 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // This way, we can simply run 
-        // $ php artisan db:seed and it will run all the called classes: 
+        // This way, we can simply run
+        // $ php artisan db:seed and it will run all the called classes:
         $this->call(ArticlesTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
+        //$this->call(UsersTableSeeder::class);
+        \App\Models\User::factory(10)->create();
+
     }
 }
